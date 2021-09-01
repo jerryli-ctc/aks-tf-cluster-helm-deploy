@@ -21,8 +21,8 @@ module "aks" {
   resource_group_name              = azurerm_resource_group.example.name
   client_id                        = var.client_id
   client_secret                    = var.client_secret
-  kubernetes_version               = "1.19.13"
-  orchestrator_version             = "1.19.13"
+  kubernetes_version               = "1.20.9"
+  orchestrator_version             = "1.20.9"
   prefix                           = "tf"
   cluster_name                     = "aks-helm-sandbox"
   network_plugin                   = "azure"
