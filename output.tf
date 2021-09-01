@@ -17,4 +17,5 @@ output "client_certificate" {
 output "kube_config" {
   value       = try(module.aks.kube_config_raw, null)
   description = "kubeconfig yaml file"
+  sensitive   = "true"
 }
