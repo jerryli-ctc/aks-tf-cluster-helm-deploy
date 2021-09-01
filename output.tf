@@ -1,6 +1,15 @@
-provider "kubernetes" {
-  host                   = module.aks.host
-  client_certificate     = base64decode(module.aks.client_certificate)
-  client_key             = base64decode(module.aks.client_key)
-  cluster_ca_certificate = base64decode(module.aks.cluster_ca_certificate)
+output "host" {
+  value = azurerm_kubernetes_cluster.default.kube_config.0.host
+}
+
+output "client_key" {
+  value = azurerm_kubernetes_cluster.default.kube_config.0.client_key
+}
+
+output "client_certificate" {
+  value = azurerm_kubernetes_cluster.default.kube_config.0.client_certificate
+}
+
+output "kube_config" {
+  value = azurerm_kubernetes_cluster.default.kube_config_raw
 }
