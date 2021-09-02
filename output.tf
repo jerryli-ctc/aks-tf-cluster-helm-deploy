@@ -3,7 +3,7 @@ output "rg" {
 }
 
 output "cluster_name" {
-  value       = module.aks.cluster_name
+  value       = try(module.aks.cluster_name)
   description = "aks cluster name retrived from module.aks"
 }
 
