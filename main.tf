@@ -17,7 +17,7 @@ data "azuread_group" "aks_cluster_admins" {
 }
 
 module "aks" {
-  source                           = "hashicorp/azurerm"
+  source                           = "Azure/aks/azurerm"
   resource_group_name              = azurerm_resource_group.rg.name
   client_id                        = var.client_id
   client_secret                    = var.client_secret
