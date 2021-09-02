@@ -24,7 +24,7 @@ module "aks" {
   kubernetes_version               = "1.20.9"
   orchestrator_version             = "1.20.9"
   prefix                           = "tf"
-  cluster_name                     = "aks-helm-sandbox"
+  cluster_name                     = var.cluster_name
   network_plugin                   = "azure"
   vnet_subnet_id                   = module.network.vnet_subnets[0]
   os_disk_size_gb                  = 50
