@@ -23,3 +23,4 @@ output "kube_config" {
 output "cluster_ca_certificate" {
   value	      = try(module.aks.cluster_ca_certificate,null)
   description = "Base64 encoded cluster ca certificate used by clients to authenticate to the Kubenetes cluster"
+}
