@@ -1,5 +1,5 @@
-output "resource_group_name" {
-  value       = try(module.aks.resource_group_name, null)
+output "rg" {
+  value       = data.azurerm_resource_group.rg.name 
 }
 
 output "name" {
