@@ -1,9 +1,9 @@
 output "resource_group_name" {
-  value       = data.azurerm_resource_group.example.name
+  value       = try(module.aks.resource_group_name, null)
 }
 
 output "name" {
-  value       = data.module.aks.cluster_name
+  value       = try(module.aks.cluster_name, null)
   description = "aks cluster name retrived from module.aks"
 }
 
