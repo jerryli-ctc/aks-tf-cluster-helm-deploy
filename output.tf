@@ -1,3 +1,12 @@
+output "resource_group_name" {
+  value       = data.azurerm_resource_group.example.name
+}
+
+output "name" {
+  value       = data.module.aks.cluster_name
+  description = "aks cluster name retrived from module.aks"
+}
+
 
 output "host" {
   value       = try(module.aks.host, null)
