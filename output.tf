@@ -2,8 +2,8 @@ output "rg" {
   value       = azurerm_resource_group.rg.name 
 }
 
-output "name" {
-  value       = try(module.aks.cluster_name, null)
+output "cluster_name" {
+  value       = module.aks.cluster_name
   description = "aks cluster name retrived from module.aks"
 }
 

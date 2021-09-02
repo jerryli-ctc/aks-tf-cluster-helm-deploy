@@ -15,3 +15,4 @@ variable "location" { default = "Canada Central" }
 variable "environment" { default = "sandbox" }
 
 variable "rg" { default = "" }
+variable "cluster_name" { default = "" }
